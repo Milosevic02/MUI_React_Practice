@@ -1,30 +1,21 @@
-import {Button,styled} from "@mui/material"
+import {Button,Container,Stack,styled,Box} from "@mui/material"
 import AddHomeWorkIcon from '@mui/icons-material/AddHomeWork';
+import Sidebar from "./components/Sidebar";
+import Rightbar from "./components/Rightbar";
+import Feed from "./components/Feed";
+import Navbar from "./components/Navbar";
 
 function App() {
-  const BlueButton = styled(Button)(({theme})=>({
-    backgroundColor:"skyblue",
-    color :"#888",
-    margin:5,
-    "&:hover":{
-      backgroundColor:"lightblue"
-    },
-    "&:disabled":{
-      backgroundColor:"red",
-      color:"white"
-    }
-  }))
   return (
-    <div>
-      <Button variant="text" color="otherColor">Text</Button>
-      <Button color="otherColor" startIcon={<AddHomeWorkIcon/>} variant="contained">Contained</Button>
-      <Button variant="contained"  sx = {{
+    <Box>
+      <Navbar></Navbar>
+      <Stack direction="row" spacing={2} justifyContent={"space-between"}>
+        <Sidebar/>
+        <Feed/>
+        <Rightbar/>
+      </Stack>
+    </Box>
 
-      }}>My Unique Button</Button>
-      <Button color="otherColor" variant="outlined">Outlined</Button>
-      <BlueButton>Prvooo</BlueButton>
-      <BlueButton>Drugoo</BlueButton>
-    </div>
   );
 }
 
