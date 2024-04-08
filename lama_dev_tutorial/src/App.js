@@ -1,5 +1,4 @@
 import {Button,Container,Stack,styled,Box} from "@mui/material"
-import AddHomeWorkIcon from '@mui/icons-material/AddHomeWork';
 import Sidebar from "./components/Sidebar";
 import Rightbar from "./components/Rightbar";
 import Feed from "./components/Feed";
